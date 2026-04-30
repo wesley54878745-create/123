@@ -1,63 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Huang Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* ===== Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <header class="hero">
-    <div class="container">
-      <h1 class="hero-name">Wesley Huang</h1>
-      <p class="hero-tagline">
-        Exploring sports tourism, digital experiences, and product thinking.
-      </p>
-      <div class="hero-buttons">
-        <a href="#" class="btn btn-primary">View Work</a>
-        <a href="#contact" class="btn btn-secondary">Contact Me</a>
-      </div>
-    </div>
-  </header>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 20% 20%, #1e293b, #020617 70%);
+  color: #e2e8f0;
+  line-height: 1.8;
+}
 
-  <section class="about">
-    <div class="container card">
-      <h2>About Me</h2>
-      <p>
-        I am a college student exploring how sports, travel, and experiences
-        can be shaped into meaningful products. I focus on learning by building,
-        starting from simple ideas and turning them into real digital outputs.
-      </p>
-    </div>
-  </section>
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
 
-  <section class="contact" id="contact">
-    <div class="container card">
-      <h2>Contact</h2>
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-      <div class="contact-item">
-        <span>Email</span>
-        <a href="mailto:cheng@email.com">wesley54878745@gmail.com</a>
-      </div>
+.hero-name {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
 
-      <div class="contact-item">
-        <span>GitHub</span>
-        <a href="https://github.com/cheng" target="_blank">github.com/Huang</a>
-      </div>
+.hero-tagline {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
 
-      <div class="contact-item">
-        <span>LinkedIn</span>
-        <a href="https://linkedin.com/in/cheng" target="_blank">linkedin.com/in/Huang</a>
-      </div>
+/* ===== Buttons ===== */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
 
-    </div>
-  </section>
+.btn {
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
 
-  <footer class="footer">
-    <p>© 2026 Huang</p>
-  </footer>
+/* Primary */
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+}
+
+/* Secondary */
+.btn-secondary {
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  color: #a5b4fc;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.btn-secondary:hover {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+/* ===== Card Style (科技感重點) ===== */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+}
+
+/* ===== About ===== */
+.about h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.about p {
+  color: #cbd5f5;
+}
+
+/* ===== Contact ===== */
+.contact h2 {
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  max-width: 420px;
+  margin: 12px auto;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.contact-item span {
+  color: #94a3b8;
+}
+
+.contact-item a {
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #c7d2fe;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .hero-name {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+  }
+}
